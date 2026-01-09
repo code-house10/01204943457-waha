@@ -57,7 +57,7 @@
         <div class="bg-[#c32020] text-white text-sm p-2">
             <div class="container mx-auto flex justify-between items-center px-4">
                 <div class="flex items-center gap-4">
-                    <a href="https://www.facebook.com/people/%D8%B4%D8%B1%D9%83%D8%A9-%D8%A7%D9%84%D9%82%D8%B5%D8%B1-%D9%84%D9%86%D9%82%D9%84-%D8%A7%D9%84%D8%A7%D8%AB%D8%A7%D8%AB/100088633735220/" target="_blank" class="hover:opacity-80 transition-opacity">
+                    <a href="https://www.facebook.com/people/%D8%B4%D8%B1%D9%83%D8%A9-%D8%A7%D9%84%D9%88%D8%A2%D8%AD%D8%A9-%D9%84%D9%86%D9%82%D9%84-%D8%A7%D9%84%D8%A7%D8%AB%D8%A7%D8%AB/100088633735220/" target="_blank" class="hover:opacity-80 transition-opacity">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
                     </a>
                 </div>
@@ -109,7 +109,7 @@
             </div>
         </section>
 
-        <!-- ⭐ Mobile Reviews Section (Shows only on mobile below video) -->
+        <!-- ⭐ Mobile Reviews Section -->
         <section class="md:hidden bg-gray-50 pb-8 px-4">
             <div id="mobile-review-card" class="bg-white p-4 rounded-xl shadow-md border border-gray-200 transition-all duration-500">
                 <div class="flex items-center gap-2 mb-3 border-b pb-2">
@@ -140,7 +140,53 @@
             </div>
         </section>
 
-        <!-- FAQs Section -->
+        <!-- 🏢 Intro Cards Section (Restored) -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="text-center p-8 border border-gray-200 rounded-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="flex justify-center mb-4">
+                            <img src="https://raw.githubusercontent.com/code-house10/aqsa-images/refs/heads/main/packing.jpg" class="rounded-full intro-card-img" alt="تغليف احترافي" onerror="this.onerror=null;this.src='https://placehold.co/80x80/f09300/ffffff?text=Icon';">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">تغليف احترافي</h3>
+                        <div class="w-20 h-1 bg-[#c76100] mx-auto mb-4"></div>
+                        <p class="text-gray-600">نستخدم أفضل مواد التغليف لحماية كل قطعة من أثاثك من الخدوش والكسر.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="text-center p-8 border border-gray-200 rounded-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="flex justify-center mb-4">
+                            <img src="https://raw.githubusercontent.com/code-house10/aqsa-images/refs/heads/main/carpentar.jpg" class="rounded-full intro-card-img" alt="فك وتركيب" onerror="this.onerror=null;this.src='https://placehold.co/80x80/f09300/ffffff?text=Icon';">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">فك وتركيب</h3>
+                        <div class="w-20 h-1 bg-[#c76100] mx-auto mb-4"></div>
+                        <p class="text-gray-600">فنيون متخصصون في فك وتركيب جميع أنواع الأثاث، الستائر، والمكيفات.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="text-center p-8 border border-gray-200 rounded-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="flex justify-center mb-4">
+                            <img src="https://raw.githubusercontent.com/code-house10/aqsa-images/refs/heads/main/truck.jpg" class="rounded-full intro-card-img" alt="سيارات مجهزة" onerror="this.onerror=null;this.src='https://placehold.co/80x80/f09300/ffffff?text=Icon';">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">سيارات مجهزة</h3>
+                        <div class="w-20 h-1 bg-[#c76100] mx-auto mb-4"></div>
+                        <p class="text-gray-600">أسطول من السيارات المجهزة والمغلقة لضمان نقل آمن في كل الظروف الجوية.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🟧 Highlight Banner Section (Restored) -->
+        <section class="highlight-gradient text-white py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">هل أنت مستعد لنقلة مريحة؟</h2>
+                <p class="max-w-2xl mx-auto mb-8">دع الخبراء يهتمون بكل التفاصيل. احصل على عرض سعر مجاني اليوم!</p>
+                <button data-modal-trigger="callModal" class="bg-white text-[#c76100] font-bold px-10 py-3 rounded-full shadow-lg hover:bg-gray-100 transition-colors text-lg">
+                    اطلب عرض سعر
+                </button>
+            </div>
+        </section>
+
+        <!-- ✅ Accordion FAQs Section -->
         <section id="faq" class="py-20">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
@@ -156,28 +202,130 @@
                             <p class="pt-4 text-gray-600">نحن نقدم خدماتنا في جميع المدن الرئيسية والمناطق المحيطة بها.</p>
                         </div>
                     </div>
+                    <div class="accordion-item border-b border-gray-200 py-4">
+                        <button class="accordion-header w-full flex justify-between items-center text-right">
+                            <h3 class="text-xl font-bold text-gray-800">هل السعر يشمل مواد التغليف؟</h3>
+                            <span class="plus-icon text-2xl text-[#c76100] font-bold">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="pt-4 text-gray-600">نعم، عرض السعر الذي نقدمه يشمل جميع مواد التغليف عالية الجودة اللازمة لحماية أثاثك بالكامل.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Services Section -->
+        <!-- 🚛 Image & Info Blocks (Restored) -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <h2 class="text-3xl font-bold text-[#c76100] mb-4">خبرة والتزام لراحتك</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        نحن لسنا مجرد شركة نقل، بل شركاءك في بدء فصل جديد من حياتك. ندرك أهمية ممتلكاتك ونتعامل معها بعناية فائقة كما لو كانت ممتلكاتنا.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>فريق عمل مدرب ومؤمن عليه بالكامل.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>الالتزام بالمواعيد المحددة مع العميل.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <img src="https://raw.githubusercontent.com/code-house10/aqsa-images/refs/heads/main/workers.jpg" alt="فريق عمل" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+            </div>
+        </section>
+
+        <!-- 📊 Statistics Banner (Restored) -->
+        <section class="bg-[#c76100] text-white py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <span class="text-5xl font-black block">+1500</span>
+                        <span class="text-xl mt-2 block">عميل راضٍ</span>
+                    </div>
+                     <div>
+                        <span class="text-5xl font-black block">+2300</span>
+                        <span class="text-xl mt-2 block">مشروع نقل ناجح</span>
+                    </div>
+                     <div>
+                        <span class="text-5xl font-black block">+15</span>
+                        <span class="text-xl mt-2 block">سنة من الخبرة</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 📦 Steps Section (Restored) -->
+        <section class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-black text-gray-800">خطوات عملنا</h2>
+                </div>
+                <div class="relative max-w-2xl mx-auto">
+                    <div class="step-connector h-full top-8 hidden sm:block"></div>
+                    <div class="relative mb-12 flex items-center gap-8">
+                        <div class="bg-[#c76100] text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold z-10 flex-shrink-0">1</div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border w-full">
+                            <h3 class="font-bold text-xl mb-2">التواصل والتقييم</h3>
+                            <p class="text-gray-600">تتصل بنا ونقوم بتقييم حجم المنقولات وتحديد المتطلبات.</p>
+                        </div>
+                    </div>
+                    <div class="relative mb-12 flex items-center gap-8">
+                        <div class="bg-[#c76100] text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold z-10 flex-shrink-0">2</div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border w-full">
+                            <h3 class="font-bold text-xl mb-2">التغليف والتحميل</h3>
+                            <p class="text-gray-600">يصل فريقنا في الموعد للبدء في عمليات التغليف والتحميل بحرفية.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🟥 Red Promo Banner (Restored) -->
+        <section class="bg-[#b32025] text-white py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">لا تتردد في طلب المساعدة</h2>
+                <button data-modal-trigger="callModal" class="bg-transparent border-2 border-white text-white font-bold px-10 py-3 rounded-lg hover:bg-white hover:text-[#b32025] transition-colors text-lg">
+                    تواصل معنا الآن
+                </button>
+            </div>
+        </section>
+
+        <!-- 🚚 Services Section (Restored Full Version) -->
         <section id="services" class="py-20 bg-gray-100">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
                     <h2 class="text-4xl font-black text-gray-800">خدماتنا المتكاملة</h2>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden p-6">
-                        <h3 class="text-xl font-bold mb-2">النقل السكني</h3>
-                        <p class="text-gray-600">نقل أثاث الشقق والفلل والقصور مع ضمان سلامة كل قطعة.</p>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://raw.githubusercontent.com/code-house10/aqsa-images/refs/heads/main/A-139-Large-1536x1024.jpg" alt="نقل أثاث سكني" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">النقل السكني</h3>
+                            <p class="text-gray-600 mb-4">نقل أثاث الشقق والفلل والقصور مع ضمان سلامة كل قطعة.</p>
+                            <a href="#" class="font-bold text-[#c76100] hover:underline">اقرأ المزيد &rarr;</a>
+                        </div>
                     </div>
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden p-6">
-                        <h3 class="text-xl font-bold mb-2">النقل المكتبي</h3>
-                        <p class="text-gray-600">نقل مكاتب الشركات والمؤسسات بأسرع وقت.</p>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://raw.githubusercontent.com/code-house10/aqsa-images/refs/heads/main/A-1019-Large-rotated.jpg" alt="نقل أثاث مكتبي" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">النقل المكتبي</h3>
+                            <p class="text-gray-600 mb-4">نقل مكاتب الشركات والمؤسسات بأسرع وقت.</p>
+                            <a href="#" class="font-bold text-[#c76100] hover:underline">اقرأ المزيد &rarr;</a>
+                        </div>
                     </div>
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden p-6">
-                        <h3 class="text-xl font-bold mb-2">التخزين الآمن</h3>
-                        <p class="text-gray-600">مستودعات آمنة ومجهزة لتخزين الأثاث.</p>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://raw.githubusercontent.com/code-house10/aqsa-images/refs/heads/main/truck4.jpg" alt="تخزين أثاث" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">التخزين الآمن</h3>
+                            <p class="text-gray-600 mb-4">مستودعات آمنة ومجهزة لتخزين الأثاث لفترات قصيرة أو طويلة.</p>
+                            <a href="#" class="font-bold text-[#c76100] hover:underline">اقرأ المزيد &rarr;</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -199,13 +347,6 @@
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold text-white mb-4">خدماتنا</h3>
-                    <ul class="space-y-2">
-                        <li>نقل أثاث</li>
-                        <li>تغليف وتخزين</li>
-                    </ul>
-                </div>
-                <div>
                     <h3 class="text-xl font-bold text-white mb-4">تواصل معنا</h3>
                     <a href="tel:01204943457" class="hover:text-white" dir="ltr">01204943457</a>
                 </div>
@@ -216,7 +357,7 @@
         </div>
     </footer>
 
-    <!-- 🎁 Smaller Offer Banner -->
+    <!-- 🎁 Offer Banner -->
     <div id="offer-banner" class="fixed bottom-4 left-4 z-40 bg-white p-3 rounded-lg shadow-2xl border-2 border-[#c32020] w-[260px] opacity-0 transform translate-y-4">
         <button id="close-offer-btn" class="absolute -top-2 -left-2 bg-white rounded-full p-1 shadow-md border border-gray-200 text-gray-500 hover:text-red-600 scale-90">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
@@ -240,7 +381,7 @@
         <button data-modal-trigger="callModal" class="w-full bg-[#c32020] text-white font-bold py-1.5 px-3 rounded text-sm hover:bg-[#a01a1a] transition-colors">اطلب الآن</button>
     </div>
 
-    <!-- ⭐ Floating Google Reviews (Desktop Only Floater) -->
+    <!-- ⭐ Floating Google Reviews -->
     <div id="review-floater" class="fixed right-4 bottom-28 z-40 bg-white p-4 rounded-xl shadow-xl border border-gray-100 w-[280px] hidden md:block">
         <div class="flex items-center gap-2 mb-2 border-b pb-2">
             <img src="https://www.gstatic.com/images/branding/product/1x/googleg_48dp.png" alt="Google" class="w-5 h-5">
@@ -293,12 +434,14 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Mobile Menu
+            // Mobile Menu logic
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            if(mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            }
             
-            // Accordion
+            // Accordion logic
             document.getElementById('accordion-container')?.addEventListener('click', (e) => {
                 const header = e.target.closest('.accordion-header');
                 if (!header) return;
@@ -311,12 +454,21 @@
             const modal = document.getElementById('callModal');
             const showStep = (step) => {
                 modal.querySelectorAll('.modal-step').forEach(s => s.classList.remove('active'));
-                document.getElementById(`modal-step-${step}`).classList.add('active');
+                const targetStep = document.getElementById(`modal-step-${step}`);
+                if (targetStep) targetStep.classList.add('active');
             };
             const openModal = () => { showStep(1); modal.classList.remove('opacity-0', 'pointer-events-none'); };
             const closeModal = () => modal.classList.add('opacity-0', 'pointer-events-none');
 
-            document.querySelectorAll('[data-modal-trigger="callModal"]').forEach(t => t.addEventListener('click', openModal));
+            // Setup modal triggers
+            const setupModalTriggers = () => {
+                document.querySelectorAll('[data-modal-trigger="callModal"]').forEach(t => {
+                    t.removeEventListener('click', openModal);
+                    t.addEventListener('click', openModal);
+                });
+            }
+            setupModalTriggers();
+            
             modal.querySelectorAll('.modal-close-btn').forEach(b => b.addEventListener('click', closeModal));
             modal.querySelector('.modal-overlay').addEventListener('click', closeModal);
             modal.querySelectorAll('.modal-step-btn').forEach(b => b.addEventListener('click', () => showStep(b.dataset.nextStep)));
@@ -325,19 +477,26 @@
             const offerBanner = document.getElementById('offer-banner');
             const endTime = new Date().getTime() + (3 * 60 * 60 * 1000);
             
-            setInterval(() => {
+            const timerInterval = setInterval(() => {
                 const now = new Date().getTime();
                 const diff = endTime - now;
-                if (diff < 0) { offerBanner.style.display = 'none'; return; }
-                document.getElementById('hours').textContent = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
-                document.getElementById('minutes').textContent = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
-                document.getElementById('seconds').textContent = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
+                if (diff < 0) { 
+                    offerBanner.style.display = 'none'; 
+                    clearInterval(timerInterval);
+                    return; 
+                }
+                const h = document.getElementById('hours');
+                const m = document.getElementById('minutes');
+                const s = document.getElementById('seconds');
+                if(h) h.textContent = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+                if(m) m.textContent = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+                if(s) s.textContent = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
                 offerBanner.classList.remove('opacity-0', 'translate-y-4');
             }, 1000);
 
-            document.getElementById('close-offer-btn').addEventListener('click', () => offerBanner.style.display = 'none');
+            document.getElementById('close-offer-btn')?.addEventListener('click', () => offerBanner.style.display = 'none');
 
-            // --- Floating & Mobile Reviews Logic ---
+            // --- Reviews Logic ---
             const reviews = [
                 { name: "محمود صبحي", text: "خدمة ممتازة وسرعة في النقل، العمال محترفين جداً." },
                 { name: "سارة ممدوح", text: "أفضل شركة نقل تعاملت معها، الأثاث وصل بدون خدش واحد." },
@@ -365,23 +524,18 @@
             const mobileReviewCard = document.getElementById('mobile-review-card');
 
             function updateReview() {
-                // Animate desktop floater
-                reviewFloater.classList.add('review-enter');
-                // Animate mobile section (fade out effect)
-                mobileReviewCard.style.opacity = '0';
+                if(reviewFloater) reviewFloater.classList.add('review-enter');
+                if(mobileReviewCard) mobileReviewCard.style.opacity = '0';
                 
                 setTimeout(() => {
                     const review = reviews[currentReviewIndex];
+                    if(reviewNameEl) reviewNameEl.textContent = review.name;
+                    if(reviewTextEl) reviewTextEl.textContent = review.text;
+                    if(reviewFloater) reviewFloater.classList.remove('review-enter');
                     
-                    // Update Desktop
-                    reviewNameEl.textContent = review.name;
-                    reviewTextEl.textContent = review.text;
-                    reviewFloater.classList.remove('review-enter');
-                    
-                    // Update Mobile
-                    reviewNameMobEl.textContent = review.name;
-                    reviewTextMobEl.textContent = review.text;
-                    mobileReviewCard.style.opacity = '1';
+                    if(reviewNameMobEl) reviewNameMobEl.textContent = review.name;
+                    if(reviewTextMobEl) reviewTextMobEl.textContent = review.text;
+                    if(mobileReviewCard) mobileReviewCard.style.opacity = '1';
                     
                     currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
                 }, 500);
