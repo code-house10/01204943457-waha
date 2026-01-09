@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    <script>(function(w,i,g){w[g]=w[g]||[];if(typeof w[g].push=='function')w[g].push(i)})(window,'GTM-N6QZQNQH','google_tags_first_party');</script>
+    <script>(function(w,d,s,l){w[l]=w[l]||[];(function(){w[l].push(arguments);})('set', 'developer_id.dYzg1YT', true);w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='/rz08/';f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer');</script>
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N6QZQNQH');</script>
-<!-- End Google Tag Manager -->
-
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N6QZQNQH');</script>
+    <!-- End Google Tag Manager -->
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,83 +17,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles to extend Tailwind */
-        body {
-            font-family: 'Cairo', sans-serif;
+        body { font-family: 'Cairo', sans-serif; }
+        .hero-gradient { background-image: linear-gradient(to bottom, #fff4ef, #ffffff); }
+        .highlight-gradient { background-image: linear-gradient(to left, #c76100, #f09300); }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out; }
+        .accordion-item.active .accordion-content { max-height: 500px; }
+        .accordion-item.active .plus-icon { transform: rotate(45deg); }
+        .plus-icon { transition: transform 0.3s ease-in-out; }
+        .step-connector { position: absolute; left: 50%; transform: translateX(-50%); width: 2px; background-color: #c76100; }
+        .modal { transition: opacity 0.25s ease; }
+        .modal-step { display: none; }
+        .modal-step.active { display: block; }
+        #offer-banner { transition: opacity 0.5s, transform 0.5s; }
+        .intro-card-img { width: 80px; height: 80px; object-fit: cover; }
+        .timer-box { min-width: 45px; }
+        
+        /* Floating Reviews Animation */
+        #review-floater {
+            transition: all 0.5s ease-in-out;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
         }
-        .hero-gradient {
-            background-image: linear-gradient(to bottom, #fff4ef, #ffffff);
+        .review-enter { opacity: 0; transform: translateX(20px); }
+        .review-active { opacity: 1; transform: translateX(0); }
+
+        /* FB Button Pulsing */
+        @keyframes pulse-fb {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
-        .highlight-gradient {
-            background-image: linear-gradient(to left, #c76100, #f09300);
-        }
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-in-out;
-        }
-        .accordion-item.active .accordion-content {
-            max-height: 500px; /* Adjust as needed */
-        }
-        .accordion-item.active .plus-icon {
-            transform: rotate(45deg);
-        }
-        .plus-icon {
-            transition: transform 0.3s ease-in-out;
-        }
-        .step-connector {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            background-color: #c76100;
-        }
-        /* Modal Styles */
-        .modal {
-            transition: opacity 0.25s ease;
-        }
-        .modal-step {
-            display: none;
-        }
-        .modal-step.active {
-            display: block;
-        }
-        /* Offer Banner Styles */
-        #offer-banner {
-            transition: opacity 0.5s, transform 0.5s;
-        }
-        .intro-card-img {
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-        }
-        .timer-box {
-            min-width: 60px;
-        }
+        .fb-float { animation: pulse-fb 2s infinite ease-in-out; }
     </style>
 </head>
 <body class="bg-gray-50 text-[#222222]">
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6QZQNQH"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6QZQNQH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- 🔝 Top Header + Navigation Bar -->
     <header class="sticky top-0 z-50 shadow-md">
-        <!-- Top Strip -->
         <div class="bg-[#c32020] text-white text-sm p-2">
             <div class="container mx-auto flex justify-between items-center px-4">
                 <div class="flex items-center gap-4">
-                    <!-- Social Icons -->
-                    <a href="#" class="hover:opacity-80 transition-opacity">
+                    <a href="https://www.facebook.com/people/%D8%B4%D8%B1%D9%83%D8%A9-%D8%A7%D9%84%D9%82%D8%B5%D8%B1-%D9%84%D9%86%D9%82%D9%84-%D8%A7%D9%84%D8%A7%D8%AB%D8%A7%D8%AB/100088633735220/" target="_blank" class="hover:opacity-80 transition-opacity">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                    </a>
-                    <a href="#" class="hover:opacity-80 transition-opacity">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
-                    </a>
-                     <a href="#" class="hover:opacity-80 transition-opacity">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                     </a>
                 </div>
                 <div class="flex items-center gap-4">
@@ -107,7 +69,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
 
-        <!-- Main Navbar -->
         <nav class="bg-white p-4">
             <div class="container mx-auto flex justify-between items-center px-4">
                 <a href="#" class="text-2xl font-black text-[#b32025]">شركة الواحة إكسبريس</a>
@@ -125,7 +86,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                 </button>
             </div>
-             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden mt-4 px-4">
                 <a href="#" class="block py-2 text-center font-bold hover:text-[#c32020]">الرئيسية</a>
                 <a href="#services" class="block py-2 text-center font-bold hover:text-[#c32020]">خدماتنا</a>
@@ -139,397 +99,191 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </nav>
     </header>
 
-    <!-- YouTube Video Section -->
-    <section class="bg-gray-100 py-12">
-        <div class="container mx-auto px-4">
-            <!-- Responsive video container -->
-            <div class="relative overflow-hidden rounded-lg shadow-xl" style="padding-top: 56.25%;"> <!-- 16:9 Aspect Ratio -->
-                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/vsDXbS9tzns?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
-
     <main>
-        <!-- 🛋️ Hero Section -->
-        <section class="hero-gradient py-20 lg:py-32">
-            <div class="container mx-auto px-4 grid lg:grid-cols-1 gap-12 items-center">
-                <div class="text-center">
-                    <h1 class="text-4xl md:text-6xl font-black text-[#b32025] leading-tight">
-                        نقل أثاثك بأمان واحترافية
-                    </h1>
-                    <p class="mt-6 text-lg text-gray-600 max-w-xl mx-auto">
-                        في شركة الواحة إكسبريس، نضمن لك تجربة نقل عفش سلسة وخالية من القلق. فريقنا المدرب يستخدم أفضل المعدات لضمان سلامة ممتلكاتك.
-                    </p>
-                    <div class="mt-10 flex justify-center gap-4">
-                        <button data-modal-trigger="callModal" class="bg-[#b32025] text-white font-bold px-8 py-3 rounded-lg shadow-lg hover:bg-opacity-90 transform hover:-translate-y-1 transition-all">
-                            اتصل الآن
-                        </button>
-                        <a href="#services" class="bg-transparent border-2 border-[#b32025] text-[#b32025] font-bold px-8 py-3 rounded-lg hover:bg-[#b32025] hover:text-white transition-colors">
-                            اعرف المزيد
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 🏢 Intro Cards Section (3 Features) -->
-        <section class="py-20 bg-white">
+        <!-- Video Section -->
+        <section class="bg-gray-100 py-12">
             <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Card 1 -->
-                    <div class="text-center p-8 border border-gray-200 rounded-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-                        <div class="flex justify-center mb-4">
-                            <img src="https://raw.githubusercontent.com/code-house10/aqsa-images/refs/heads/main/packing.jpg" class="rounded-full intro-card-img" alt="تغليف احترافي" onerror="this.onerror=null;this.src='https://placehold.co/80x80/f09300/ffffff?text=Icon';">
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">تغليف احترافي</h3>
-                        <div class="w-20 h-1 bg-[#c76100] mx-auto mb-4"></div>
-                        <p class="text-gray-600">نستخدم أفضل مواد التغليف لحماية كل قطعة من أثاثك من الخدوش والكسر.</p>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="text-center p-8 border border-gray-200 rounded-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-                        <div class="flex justify-center mb-4">
-                            <img src="https://raw.githubusercontent.com/code-house10/aqsa-images/refs/heads/main/carpentar.jpg" class="rounded-full intro-card-img" alt="فك وتركيب" onerror="this.onerror=null;this.src='https://placehold.co/80x80/f09300/ffffff?text=Icon';">
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">فك وتركيب</h3>
-                        <div class="w-20 h-1 bg-[#c76100] mx-auto mb-4"></div>
-                        <p class="text-gray-600">فنيون متخصصون في فك وتركيب جميع أنواع الأثاث، الستائر، والمكيفات.</p>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="text-center p-8 border border-gray-200 rounded-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-                        <div class="flex justify-center mb-4">
-                            <img src="https://raw.githubusercontent.com/code-house10/aqsa-images/refs/heads/main/truck.jpg" class="rounded-full intro-card-img" alt="سيارات مجهزة" onerror="this.onerror=null;this.src='https://placehold.co/80x80/f09300/ffffff?text=Icon';">
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">سيارات مجهزة</h3>
-                        <div class="w-20 h-1 bg-[#c76100] mx-auto mb-4"></div>
-                        <p class="text-gray-600">أسطول من السيارات المجهزة والمغلقة لضمان نقل آمن في كل الظروف الجوية.</p>
-                    </div>
+                <div class="relative overflow-hidden rounded-lg shadow-xl" style="padding-top: 56.25%;">
+                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/vsDXbS9tzns?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
 
-        <!-- 🟧 Highlight Banner Section -->
-        <section class="highlight-gradient text-white py-16">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">هل أنت مستعد لنقلة مريحة؟</h2>
-                <p class="max-w-2xl mx-auto mb-8">دع الخبراء يهتمون بكل التفاصيل. احصل على عرض سعر مجاني اليوم!</p>
-                <button data-modal-trigger="callModal" class="bg-white text-[#c76100] font-bold px-10 py-3 rounded-full shadow-lg hover:bg-gray-100 transition-colors text-lg">
-                    اطلب عرض سعر
-                </button>
+        <!-- ⭐ Mobile Reviews Section (Shows only on mobile below video) -->
+        <section class="md:hidden bg-gray-50 pb-8 px-4">
+            <div id="mobile-review-card" class="bg-white p-4 rounded-xl shadow-md border border-gray-200 transition-all duration-500">
+                <div class="flex items-center gap-2 mb-3 border-b pb-2">
+                    <img src="https://www.gstatic.com/images/branding/product/1x/googleg_48dp.png" alt="Google" class="w-5 h-5">
+                    <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">تقييمات جوجل</span>
+                    <div class="flex text-yellow-400 ml-auto">
+                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                </div>
+                <h5 id="review-name-mobile" class="font-bold text-sm text-gray-800">محمود صبحي</h5>
+                <p id="review-text-mobile" class="text-xs text-gray-600 mt-1 italic leading-relaxed">جاري التحميل...</p>
             </div>
         </section>
 
-        <!-- ✅ Accordion (FAQs / Expandable Text) -->
+        <!-- Hero Section -->
+        <section class="hero-gradient py-20 lg:py-32">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-6xl font-black text-[#b32025] leading-tight">نقل أثاثك بأمان واحترافية</h1>
+                <p class="mt-6 text-lg text-gray-600 max-w-xl mx-auto">نضمن لك تجربة نقل عفش سلسة وخالية من القلق مع فريق مدرب ومعدات حديثة.</p>
+                <div class="mt-10 flex justify-center gap-4">
+                    <button data-modal-trigger="callModal" class="bg-[#b32025] text-white font-bold px-8 py-3 rounded-lg shadow-lg hover:bg-opacity-90 transition-all">اتصل الآن</button>
+                    <a href="#services" class="border-2 border-[#b32025] text-[#b32025] font-bold px-8 py-3 rounded-lg hover:bg-[#b32025] hover:text-white transition-colors">خدماتنا</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQs Section -->
         <section id="faq" class="py-20">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
                     <h2 class="text-4xl font-black text-gray-800">أسئلة شائعة</h2>
-                    <p class="text-gray-600 mt-4">نجيب على استفساراتكم الأكثر شيوعًا لمساعدتكم.</p>
                 </div>
                 <div class="max-w-3xl mx-auto" id="accordion-container">
-                    <!-- Accordion Item 1 -->
                     <div class="accordion-item border-b border-gray-200 py-4">
                         <button class="accordion-header w-full flex justify-between items-center text-right">
                             <h3 class="text-xl font-bold text-gray-800">ما هي المدن التي تغطونها؟</h3>
                             <span class="plus-icon text-2xl text-[#c76100] font-bold">+</span>
                         </button>
                         <div class="accordion-content">
-                            <p class="pt-4 text-gray-600">نحن نقدم خدماتنا في جميع المدن الرئيسية والمناطق المحيطة بها. تواصل معنا للتأكد من تغطية منطقتك.</p>
-                        </div>
-                    </div>
-                    <!-- Accordion Item 2 -->
-                    <div class="accordion-item border-b border-gray-200 py-4">
-                        <button class="accordion-header w-full flex justify-between items-center text-right">
-                            <h3 class="text-xl font-bold text-gray-800">هل السعر يشمل مواد التغليف؟</h3>
-                            <span class="plus-icon text-2xl text-[#c76100] font-bold">+</span>
-                        </button>
-                        <div class="accordion-content">
-                            <p class="pt-4 text-gray-600">نعم، عرض السعر الذي نقدمه يشمل جميع مواد التغليف عالية الجودة اللازمة لحماية أثاثك بالكامل.</p>
-                        </div>
-                    </div>
-                    <!-- Accordion Item 3 -->
-                    <div class="accordion-item border-b border-gray-200 py-4">
-                        <button class="accordion-header w-full flex justify-between items-center text-right">
-                            <h3 class="text-xl font-bold text-gray-800">كم من الوقت يستغرق النقل؟</h3>
-                            <span class="plus-icon text-2xl text-[#c76100] font-bold">+</span>
-                        </button>
-                        <div class="accordion-content">
-                            <p class="pt-4 text-gray-600">يعتمد الوقت على حجم الأثاث والمسافة بين الموقعين. لكننا نضمن دائمًا إنجاز المهمة في أسرع وقت ممكن وبكفاءة عالية.</p>
+                            <p class="pt-4 text-gray-600">نحن نقدم خدماتنا في جميع المدن الرئيسية والمناطق المحيطة بها.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 🚛 Image & Info Blocks -->
-        <section id="about" class="py-20 bg-white">
-            <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
-                <div class="order-2 lg:order-1">
-                    <h2 class="text-3xl font-bold text-[#c76100] mb-4">خبرة والتزام لراحتك</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        نحن لسنا مجرد شركة نقل، بل شركاءك في بدء فصل جديد من حياتك. ندرك أهمية ممتلكاتك ونتعامل معها بعناية فائقة كما لو كانت ممتلكاتنا.
-                    </p>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3">
-                            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <span>فريق عمل مدرب ومؤمن عليه بالكامل.</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <span>الالتزام بالمواعيد المحددة مع العميل.</span>
-                        </li>
-                         <li class="flex items-center gap-3">
-                            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <span>أسعار تنافسية وشفافية تامة بدون تكاليف خفية.</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="order-1 lg:order-2">
-                    <img src="https://raw.githubusercontent.com/code-house10/aqsa-images/refs/heads/main/workers.jpg" alt="فريق عمل شركة الواحة إكسبريس" class="rounded-lg shadow-xl w-full h-auto" onerror="this.onerror=null;this.src='https://placehold.co/600x450/e2e8f0/4a5568?text=Image+Not+Found';">
-                </div>
-            </div>
-        </section>
-
-        <!-- 📊 Statistics Banner -->
-        <section class="bg-[#c76100] text-white py-16">
-            <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <div>
-                        <span class="text-5xl font-black block">+1500</span>
-                        <span class="text-xl mt-2 block">عميل راضٍ</span>
-                    </div>
-                     <div>
-                        <span class="text-5xl font-black block">+2300</span>
-                        <span class="text-xl mt-2 block">مشروع نقل ناجح</span>
-                    </div>
-                     <div>
-                        <span class="text-5xl font-black block">+15</span>
-                        <span class="text-xl mt-2 block">سنة من الخبرة</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 📦 Steps Section (Timeline Style) -->
-        <section class="py-20">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-black text-gray-800">خطوات عملنا</h2>
-                    <p class="text-gray-600 mt-4">نتبع عملية منظمة لضمان تجربة نقل مثالية.</p>
-                </div>
-                <div class="relative max-w-2xl mx-auto">
-                    <!-- Vertical Connector Line -->
-                    <div class="step-connector h-full top-8 hidden sm:block"></div>
-                    <!-- Step 1 -->
-                    <div class="relative mb-12 flex items-center gap-8">
-                        <div class="bg-[#c76100] text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold z-10 flex-shrink-0">1</div>
-                        <div class="bg-white p-6 rounded-xl shadow-lg border w-full">
-                            <h3 class="font-bold text-xl mb-2">التواصل والتقييم</h3>
-                            <p class="text-gray-600">تتصل بنا ونقوم بتقييم حجم المنقولات وتحديد المتطلبات.</p>
-                        </div>
-                    </div>
-                    <!-- Step 2 -->
-                    <div class="relative mb-12 flex items-center gap-8">
-                        <div class="bg-[#c76100] text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold z-10 flex-shrink-0">2</div>
-                        <div class="bg-white p-6 rounded-xl shadow-lg border w-full">
-                            <h3 class="font-bold text-xl mb-2">التغليف والتحميل</h3>
-                            <p class="text-gray-600">يصل فريقنا في الموعد للبدء في عمليات التغليف والتحميل بحرفية.</p>
-                        </div>
-                    </div>
-                    <!-- Step 3 -->
-                    <div class="relative mb-12 flex items-center gap-8">
-                        <div class="bg-[#c76100] text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold z-10 flex-shrink-0">3</div>
-                        <div class="bg-white p-6 rounded-xl shadow-lg border w-full">
-                            <h3 class="font-bold text-xl mb-2">النقل الآمن</h3>
-                            <p class="text-gray-600">يتم نقل الأثاث في شاحناتنا المجهزة إلى وجهته الجديدة.</p>
-                        </div>
-                    </div>
-                     <!-- Step 4 -->
-                    <div class="relative flex items-center gap-8">
-                        <div class="bg-[#c76100] text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold z-10 flex-shrink-0">4</div>
-                        <div class="bg-white p-6 rounded-xl shadow-lg border w-full">
-                            <h3 class="font-bold text-xl mb-2">التفريغ والتركيب</h3>
-                            <p class="text-gray-600">نقوم بتفريغ الأثاث، وإعادة تركيبه في مكانه حسب توجيهاتك.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 🟥 Red Promo Banner -->
-        <section class="bg-[#b32025] text-white py-16">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">لا تتردد في طلب المساعدة</h2>
-                <p class="max-w-2xl mx-auto mb-8">فريق خدمة العملاء لدينا جاهز للرد على جميع استفساراتك على مدار الساعة.</p>
-                <button data-modal-trigger="callModal" class="bg-transparent border-2 border-white text-white font-bold px-10 py-3 rounded-lg hover:bg-white hover:text-[#b32025] transition-colors text-lg">
-                    تواصل معنا الآن
-                </button>
-            </div>
-        </section>
-
-        <!-- 🚚 Services Cards Section -->
+        <!-- Services Section -->
         <section id="services" class="py-20 bg-gray-100">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
                     <h2 class="text-4xl font-black text-gray-800">خدماتنا المتكاملة</h2>
-                    <p class="text-gray-600 mt-4">نقدم حلولاً شاملة لتلبية كافة احتياجات النقل والتخزين.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Service Card 1 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://raw.githubusercontent.com/code-house10/aqsa-images/refs/heads/main/A-139-Large-1536x1024.jpg" alt="نقل أثاث سكني" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x250/fde68a/4b5563?text=Image+Not+Found';">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">النقل السكني</h3>
-                            <p class="text-gray-600 mb-4">نقل أثاث الشقق والفلل والقصور مع ضمان سلامة كل قطعة.</p>
-                            <a href="#" class="font-bold text-[#c76100] hover:underline">اقرأ المزيد &rarr;</a>
-                        </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden p-6">
+                        <h3 class="text-xl font-bold mb-2">النقل السكني</h3>
+                        <p class="text-gray-600">نقل أثاث الشقق والفلل والقصور مع ضمان سلامة كل قطعة.</p>
                     </div>
-                    <!-- Service Card 2 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://raw.githubusercontent.com/code-house10/aqsa-images/refs/heads/main/A-1019-Large-rotated.jpg" alt="نقل أثاث مكتبي" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x250/a5b4fc/1f2937?text=Image+Not+Found';">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">النقل المكتبي</h3>
-                            <p class="text-gray-600 mb-4">نقل مكاتب الشركات والمؤسسات بأسرع وقت لضمان عدم تعطل أعمالكم.</p>
-                            <a href="#" class="font-bold text-[#c76100] hover:underline">اقرأ المزيد &rarr;</a>
-                        </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden p-6">
+                        <h3 class="text-xl font-bold mb-2">النقل المكتبي</h3>
+                        <p class="text-gray-600">نقل مكاتب الشركات والمؤسسات بأسرع وقت.</p>
                     </div>
-                    <!-- Service Card 3 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://raw.githubusercontent.com/code-house10/aqsa-images/refs/heads/main/truck4.jpg" alt="تخزين أثاث" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x250/99f6e4/0f766e?text=Image+Not+Found';">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">التخزين الآمن</h3>
-                            <p class="text-gray-600 mb-4">مستودعات آمنة ومجهزة لتخزين الأثاث لفترات قصيرة أو طويلة.</p>
-                            <a href="#" class="font-bold text-[#c76100] hover:underline">اقرأ المزيد &rarr;</a>
-                        </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden p-6">
+                        <h3 class="text-xl font-bold mb-2">التخزين الآمن</h3>
+                        <p class="text-gray-600">مستودعات آمنة ومجهزة لتخزين الأثاث.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- 🔚 Footer -->
     <footer id="contact" class="bg-[#502d1d] text-gray-300 pt-16">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- About Column -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <h3 class="text-xl font-bold text-white mb-4">شركة الواحة إكسبريس</h3>
-                    <p class="mb-4">
-                        رواد خدمات نقل الأثاث، نلتزم بتقديم أعلى مستويات الجودة والأمان لعملائنا في كل خطوة.
-                    </p>
-                    <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-[#c32020] transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-[#c32020] transition-colors">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
-                        </a>
-                         <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-[#c32020] transition-colors">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="2"></line></svg>
-                        </a>
-                    </div>
+                    <p>رواد خدمات نقل الأثاث في المملكة.</p>
                 </div>
-                <!-- Links Column -->
                 <div>
                     <h3 class="text-xl font-bold text-white mb-4">روابط سريعة</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white transition-colors">الرئيسية</a></li>
-                        <li><a href="#services" class="hover:text-white transition-colors">خدماتنا</a></li>
-                        <li><a href="#about" class="hover:text-white transition-colors">عن الشركة</a></li>
-                        <li><a href="#faq" class="hover:text-white transition-colors">الأسئلة الشائعة</a></li>
+                        <li><a href="#" class="hover:text-white">الرئيسية</a></li>
+                        <li><a href="#services" class="hover:text-white">خدماتنا</a></li>
                     </ul>
                 </div>
-                <!-- Services Column -->
-                 <div>
+                <div>
                     <h3 class="text-xl font-bold text-white mb-4">خدماتنا</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white transition-colors">نقل أثاث سكني</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">نقل أثاث مكتبي</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">تغليف وتخزين</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">فك وتركيب</a></li>
+                        <li>نقل أثاث</li>
+                        <li>تغليف وتخزين</li>
                     </ul>
                 </div>
-                <!-- Contact Column -->
                 <div>
-                    <h3 class="text-xl font-bold text-white mb-4">معلومات التواصل</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 mt-1 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            <span>شارع المثال، المدينة، الدولة</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                            <a href="tel:01204943457" class="hover:text-white transition-colors" dir="ltr">01204943457</a>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                            <a href="mailto:info@alhantour.com" class="hover:text-white transition-colors">info@alhantour.com</a>
-                        </li>
-                    </ul>
+                    <h3 class="text-xl font-bold text-white mb-4">تواصل معنا</h3>
+                    <a href="tel:01204943457" class="hover:text-white" dir="ltr">01204943457</a>
                 </div>
             </div>
-            <!-- Sub-footer -->
             <div class="mt-12 border-t border-gray-700 py-6 text-center text-sm">
-                <p>&copy; 2024 شركة الواحة إكسبريس لنقل الأثاث. جميع الحقوق محفوظة.</p>
+                <p>&copy; 2024 شركة الواحة إكسبريس لنقل الأثاث.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating Offer Banner -->
-    <div id="offer-banner" class="fixed bottom-4 left-4 z-40 bg-white p-4 rounded-lg shadow-2xl border-2 border-[#c32020] w-11/12 max-w-sm opacity-0 transform translate-y-4">
-        <button id="close-offer-btn" class="absolute -top-2 -left-2 bg-white rounded-full p-1 shadow-md border border-gray-200 text-gray-500 hover:text-red-600 hover:scale-110 transition-all">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    <!-- 🎁 Smaller Offer Banner -->
+    <div id="offer-banner" class="fixed bottom-4 left-4 z-40 bg-white p-3 rounded-lg shadow-2xl border-2 border-[#c32020] w-[260px] opacity-0 transform translate-y-4">
+        <button id="close-offer-btn" class="absolute -top-2 -left-2 bg-white rounded-full p-1 shadow-md border border-gray-200 text-gray-500 hover:text-red-600 scale-90">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </button>
-        <h4 class="font-bold text-lg text-[#b32025] text-center">عرض خاص!</h4>
-        <p class="text-gray-700 my-2 text-center">احصل على خصم <span class="font-bold text-xl">25%</span>. العرض ينتهي خلال:</p>
-        <div id="countdown" class="flex justify-center gap-2 text-center my-3" dir="ltr">
-            <!-- Seconds -->
-            <div class="timer-box bg-red-100 text-red-800 p-2 rounded-lg flex flex-col items-center">
-                <span id="seconds" class="text-2xl font-bold">00</span>
-                <span class="text-xs">ثانية</span>
+        <h4 class="font-bold text-base text-[#b32025] text-center">عرض محدود!</h4>
+        <p class="text-gray-700 my-1 text-center text-xs">خصم <span class="font-bold text-sm text-red-600">25%</span> لفترة محدودة</p>
+        <div id="countdown" class="flex justify-center gap-1 text-center my-2" dir="ltr">
+            <div class="timer-box bg-red-50 text-red-800 p-1 rounded flex flex-col items-center">
+                <span id="seconds" class="text-sm font-bold">00</span>
+                <span class="text-[9px]">ثانية</span>
             </div>
-            <!-- Minutes -->
-            <div class="timer-box bg-red-100 text-red-800 p-2 rounded-lg flex flex-col items-center">
-                <span id="minutes" class="text-2xl font-bold">00</span>
-                <span class="text-xs">دقيقة</span>
+            <div class="timer-box bg-red-50 text-red-800 p-1 rounded flex flex-col items-center">
+                <span id="minutes" class="text-sm font-bold">00</span>
+                <span class="text-[9px]">دقيقة</span>
             </div>
-            <!-- Hours -->
-            <div class="timer-box bg-red-100 text-red-800 p-2 rounded-lg flex flex-col items-center">
-                <span id="hours" class="text-2xl font-bold">00</span>
-                <span class="text-xs">ساعة</span>
+            <div class="timer-box bg-red-50 text-red-800 p-1 rounded flex flex-col items-center">
+                <span id="hours" class="text-sm font-bold">00</span>
+                <span class="text-[9px]">ساعة</span>
             </div>
         </div>
-        <button data-modal-trigger="callModal" class="w-full bg-[#c32020] text-white font-bold py-2 px-4 rounded-lg hover:bg-[#a01a1a] transition-colors">
-            اطلب العرض الآن
-        </button>
+        <button data-modal-trigger="callModal" class="w-full bg-[#c32020] text-white font-bold py-1.5 px-3 rounded text-sm hover:bg-[#a01a1a] transition-colors">اطلب الآن</button>
     </div>
 
+    <!-- ⭐ Floating Google Reviews (Desktop Only Floater) -->
+    <div id="review-floater" class="fixed right-4 bottom-28 z-40 bg-white p-4 rounded-xl shadow-xl border border-gray-100 w-[280px] hidden md:block">
+        <div class="flex items-center gap-2 mb-2 border-b pb-2">
+            <img src="https://www.gstatic.com/images/branding/product/1x/googleg_48dp.png" alt="Google" class="w-5 h-5">
+            <span class="text-sm font-bold text-gray-600">تقييمات جوجل</span>
+            <div class="flex text-yellow-400 ml-auto">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+        </div>
+        <div id="review-content">
+            <h5 id="review-name" class="font-bold text-sm text-gray-800">جاري التحميل...</h5>
+            <p id="review-text" class="text-xs text-gray-600 mt-1 italic leading-relaxed line-clamp-2">شكراً لكم على الخدمة الممتازة.</p>
+        </div>
+    </div>
 
-    <!-- Call Confirmation Modal -->
+    <!-- 🔵 Floating Facebook Icon -->
+    <a href="https://www.facebook.com/people/%D8%B4%D8%B1%D9%83%D8%A9-%D8%A7%D9%84%D9%88%D8%A2%D8%AD%D8%A9-%D9%84%D9%86%D9%82%D9%84-%D8%A7%D9%84%D8%A7%D8%AB%D8%A7%D8%AB/100088633735220/" target="_blank" class="fb-float fixed right-4 bottom-4 z-50 bg-[#1877F2] text-white p-3 rounded-full shadow-2xl hover:bg-[#0d6efd] transition-all flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+    </a>
+
+    <!-- Modal Logic -->
     <div id="callModal" class="modal pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center opacity-0 z-50">
         <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
         <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded-xl shadow-lg z-50 overflow-y-auto">
             <div class="modal-content text-center p-6">
-                <!-- Step 1: Seriousness Check -->
                 <div id="modal-step-1" class="modal-step active">
-                    <h3 class="text-2xl font-bold mb-4">تأكيد طلب الخدمة</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-[#b32025]">تأكيد طلب الخدمة</h3>
                     <p class="mb-6 text-gray-700">حابب تعرف تكلفة نقل العفش دلوقتي؟</p>
                     <div class="flex justify-center gap-4">
-                        <button class="modal-close-btn bg-gray-300 text-gray-800 font-bold py-2 px-6 rounded-lg hover:bg-gray-400">لا، ليس الآن</button>
-                        <button data-next-step="2" class="modal-step-btn bg-green-500 text-white font-bold py-2 px-8 rounded-lg hover:bg-green-600">نعم، عاوز اعرف</button>
+                        <button class="modal-close-btn bg-gray-200 text-gray-800 font-bold py-2 px-6 rounded-lg">لا، ليس الآن</button>
+                        <button data-next-step="2" class="modal-step-btn bg-green-600 text-white font-bold py-2 px-8 rounded-lg">نعم، أريد</button>
                     </div>
                 </div>
-                <!-- Step 2: Confirmation -->
                 <div id="modal-step-2" class="modal-step">
                     <h3 class="text-2xl font-bold mb-4">خطوة أخيرة</h3>
-                    <p class="mb-6 text-gray-700">ممتاز! نحن جاهزون لخدمتك. هل تود رؤية الرقم الآن؟</p>
-                    <button data-next-step="3" class="modal-step-btn bg-green-500 text-white font-bold py-3 px-10 rounded-lg hover:bg-green-600 text-lg">نعم، أظهر الرقم</button>
+                    <button data-next-step="3" class="modal-step-btn bg-green-600 text-white font-bold py-3 px-10 rounded-lg text-lg">أظهر الرقم</button>
                 </div>
-                <!-- Step 3: Show Number -->
                 <div id="modal-step-3" class="modal-step">
-                    <h3 class="text-2xl font-bold mb-4">اتصل بنا مباشرة</h3>
-                    <p class="mb-6 text-gray-700">اضغط على الرقم للتواصل الفوري معنا.</p>
-                    <a href="tel:01204943457" class="inline-flex items-center justify-center gap-4 bg-[#c32020] text-white font-bold text-2xl tracking-widest px-8 py-4 rounded-lg hover:bg-[#a01a1a] transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <h3 class="text-xl font-bold mb-4">اتصل بنا مباشرة</h3>
+                    <a href="tel:01204943457" class="inline-flex items-center justify-center gap-4 bg-[#c32020] text-white font-bold text-2xl px-8 py-4 rounded-lg">
                         <span dir="ltr">01204943457</span>
                     </a>
                 </div>
@@ -537,162 +291,105 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
 
-
     <script>
-        // Wait for the DOM to be fully loaded
         document.addEventListener('DOMContentLoaded', () => {
-
-            // JavaScript for mobile menu toggle
+            // Mobile Menu
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
+            mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
             
-            // JavaScript for accordion
-            const accordionContainer = document.getElementById('accordion-container');
-            if (accordionContainer) {
-                accordionContainer.addEventListener('click', function(e) {
-                    const header = e.target.closest('.accordion-header');
-                    if (!header) return;
+            // Accordion
+            document.getElementById('accordion-container')?.addEventListener('click', (e) => {
+                const header = e.target.closest('.accordion-header');
+                if (!header) return;
+                const item = header.parentElement;
+                document.querySelectorAll('.accordion-item').forEach(i => i !== item && i.classList.remove('active'));
+                item.classList.toggle('active');
+            });
 
-                    const item = header.parentElement;
-                    const allItems = accordionContainer.querySelectorAll('.accordion-item');
-
-                    allItems.forEach(i => {
-                        if (i !== item && i.classList.contains('active')) {
-                            i.classList.remove('active');
-                        }
-                    });
-                    
-                    item.classList.toggle('active');
-                });
-            }
-
-            // --- Call Modal Logic ---
+            // Modal logic
             const modal = document.getElementById('callModal');
-            
-            const openModal = () => {
-                // Reset to step 1 every time modal is opened
-                showStep(1);
-                modal.classList.remove('opacity-0', 'pointer-events-none');
+            const showStep = (step) => {
+                modal.querySelectorAll('.modal-step').forEach(s => s.classList.remove('active'));
+                document.getElementById(`modal-step-${step}`).classList.add('active');
             };
+            const openModal = () => { showStep(1); modal.classList.remove('opacity-0', 'pointer-events-none'); };
+            const closeModal = () => modal.classList.add('opacity-0', 'pointer-events-none');
 
-            const closeModal = () => {
-                modal.classList.add('opacity-0', 'pointer-events-none');
-            };
-            
-            const showStep = (stepNumber) => {
-                modal.querySelectorAll('.modal-step').forEach(step => {
-                    step.classList.remove('active');
-                });
-                document.getElementById(`modal-step-${stepNumber}`).classList.add('active');
-            };
-
-            // This needs to be dynamic for the offer banner button
-            const setupModalTriggers = () => {
-                 document.querySelectorAll('[data-modal-trigger="callModal"]').forEach(trigger => {
-                    // Remove old listener to prevent duplicates
-                    trigger.removeEventListener('click', openModal); 
-                    // Add new listener
-                    trigger.addEventListener('click', openModal);
-                });
-            }
-            
-            setupModalTriggers(); // Initial setup
-
-            modal.querySelectorAll('.modal-close-btn').forEach(btn => {
-                btn.addEventListener('click', closeModal);
-            });
-
+            document.querySelectorAll('[data-modal-trigger="callModal"]').forEach(t => t.addEventListener('click', openModal));
+            modal.querySelectorAll('.modal-close-btn').forEach(b => b.addEventListener('click', closeModal));
             modal.querySelector('.modal-overlay').addEventListener('click', closeModal);
+            modal.querySelectorAll('.modal-step-btn').forEach(b => b.addEventListener('click', () => showStep(b.dataset.nextStep)));
 
-            modal.querySelectorAll('.modal-step-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const nextStep = btn.dataset.nextStep;
-                    if (nextStep) {
-                        showStep(nextStep);
-                    }
-                });
-            });
-
-            document.addEventListener('keydown', (e) => {
-                if (e.key === "Escape" && !modal.classList.contains('pointer-events-none')) {
-                    closeModal();
-                }
-            });
-
-            // --- Countdown Timer Logic ---
+            // Countdown Logic
             const offerBanner = document.getElementById('offer-banner');
-            const closeOfferBtn = document.getElementById('close-offer-btn');
-            const hoursEl = document.getElementById('hours');
-            const minutesEl = document.getElementById('minutes');
-            const secondsEl = document.getElementById('seconds');
-            const offerDuration = 3 * 60 * 60 * 1000; // 3 hours in milliseconds
-            let countdownInterval;
+            const endTime = new Date().getTime() + (3 * 60 * 60 * 1000);
+            
+            setInterval(() => {
+                const now = new Date().getTime();
+                const diff = endTime - now;
+                if (diff < 0) { offerBanner.style.display = 'none'; return; }
+                document.getElementById('hours').textContent = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
+                offerBanner.classList.remove('opacity-0', 'translate-y-4');
+            }, 1000);
 
-            function startCountdown(endTime) {
-                if (countdownInterval) clearInterval(countdownInterval);
+            document.getElementById('close-offer-btn').addEventListener('click', () => offerBanner.style.display = 'none');
 
-                countdownInterval = setInterval(() => {
-                    const now = new Date().getTime();
-                    const distance = endTime - now;
+            // --- Floating & Mobile Reviews Logic ---
+            const reviews = [
+                { name: "محمود صبحي", text: "خدمة ممتازة وسرعة في النقل، العمال محترفين جداً." },
+                { name: "سارة ممدوح", text: "أفضل شركة نقل تعاملت معها، الأثاث وصل بدون خدش واحد." },
+                { name: "محمد الدسوقي", text: "دقة في المواعيد وأسعار منافسة جداً مقارنة بالجودة." },
+                { name: "شيماء إبراهيم", text: "التغليف كان رائعاً ومحكماً، شكراً لكم على الأمانة." },
+                { name: "هاني جاد", text: "فريق عمل منظم جداً وسرعة في الفك والتركيب." },
+                { name: "دعاء زكي", text: "تجربة مريحة جداً، لم أشعر بأي تعب في الانتقال." },
+                { name: "كريم الشناوي", text: "أنصح الجميع بالتعامل معهم، احترافية عالية." },
+                { name: "مروة البحيري", text: "عمالة مدربة وأدب في التعامل، شكراً جزيلاً." },
+                { name: "أشرف مبروك", text: "السيارات مجهزة ونظيفة، النقل تم بسلاسة." },
+                { name: "نورهان الشاذلي", text: "خدمة العملاء متعاونة جداً وسرعة في الرد." },
+                { name: "وائل غنيم", text: "شركة محترمة جداً تلتزم بكافة بنود الاتفاق." },
+                { name: "رشا منصور", text: "تم نقل عفش بيتي بالكامل في ساعات قليلة وبإتقان." },
+                { name: "طارق السيوفي", text: "أفضل تغليف شفته، استخدموا خامات قوية جداً." },
+                { name: "إيهاب توفيق", text: "النجارين عندهم خبرة كبيرة في فك غرف النوم المعقدة." },
+                { name: "هبة الله كامل", text: "بارك الله فيكم، خدمة تبيض الوجه." }
+            ];
 
-                    if (distance < 0) {
-                        clearInterval(countdownInterval);
-                        offerBanner.style.opacity = '0';
-                        offerBanner.style.transform = 'translateY(1rem)';
-                        setTimeout(() => offerBanner.style.display = 'none', 500);
-                        localStorage.removeItem('offerEndTime');
-                        return;
-                    }
+            let currentReviewIndex = 0;
+            const reviewNameEl = document.getElementById('review-name');
+            const reviewTextEl = document.getElementById('review-text');
+            const reviewNameMobEl = document.getElementById('review-name-mobile');
+            const reviewTextMobEl = document.getElementById('review-text-mobile');
+            const reviewFloater = document.getElementById('review-floater');
+            const mobileReviewCard = document.getElementById('mobile-review-card');
 
-                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                    hoursEl.textContent = String(hours).padStart(2, '0');
-                    minutesEl.textContent = String(minutes).padStart(2, '0');
-                    secondsEl.textContent = String(seconds).padStart(2, '0');
+            function updateReview() {
+                // Animate desktop floater
+                reviewFloater.classList.add('review-enter');
+                // Animate mobile section (fade out effect)
+                mobileReviewCard.style.opacity = '0';
+                
+                setTimeout(() => {
+                    const review = reviews[currentReviewIndex];
                     
-                    offerBanner.classList.remove('opacity-0', 'transform', 'translate-y-4');
-                }, 1000);
+                    // Update Desktop
+                    reviewNameEl.textContent = review.name;
+                    reviewTextEl.textContent = review.text;
+                    reviewFloater.classList.remove('review-enter');
+                    
+                    // Update Mobile
+                    reviewNameMobEl.textContent = review.name;
+                    reviewTextMobEl.textContent = review.text;
+                    mobileReviewCard.style.opacity = '1';
+                    
+                    currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
+                }, 500);
             }
-            
-            // Close button functionality
-            closeOfferBtn.addEventListener('click', () => {
-                offerBanner.style.opacity = '0';
-                offerBanner.style.transform = 'translateY(1rem)';
-                setTimeout(() => offerBanner.style.display = 'none', 500);
-                localStorage.setItem('offerClosed', 'true');
-                if (countdownInterval) clearInterval(countdownInterval);
-            });
 
-            // Main logic to show or hide banner
-            const offerClosedByUser = localStorage.getItem('offerClosed') === 'true';
-            if (offerClosedByUser) {
-                offerBanner.style.display = 'none';
-            } else {
-                const storedEndTime = localStorage.getItem('offerEndTime');
-                if (storedEndTime) {
-                    const endTime = parseInt(storedEndTime, 10);
-                    if (new Date().getTime() < endTime) {
-                        startCountdown(endTime);
-                    } else {
-                        offerBanner.style.display = 'none';
-                        localStorage.removeItem('offerEndTime');
-                    }
-                } else {
-                    const newEndTime = new Date().getTime() + offerDuration;
-                    localStorage.setItem('offerEndTime', newEndTime);
-                    startCountdown(newEndTime);
-                }
-            }
-            
-            setupModalTriggers();
+            updateReview();
+            setInterval(updateReview, 4000);
         });
     </script>
 </body>
 </html>
-
